@@ -74,9 +74,14 @@ ul {
 
 li {
 	font-size: 0.6em;
-	padding: 10px 15px 18px;
+	padding: 15px 15px 18px;
 	border: 1px solid #ababab;
 	margin: 10px 0;
+	position: relative;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 li.completed {
@@ -84,12 +89,56 @@ li.completed {
 	color: #dcdee4;
 }
 
-li span {
-	display: inline-block;
-	width: ;
+li input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
 }
 
+.checkmark {
+	position: absolute;
+	top: 14px;
+	left: 10px;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+}
 
+li:hover input ~ .checkmark {
+	background-color: #ccc;
+	cursor: pointer;
+}
+
+li input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+li input:checked ~ .checkmark:after {
+	display: block;
+}
+
+li .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+li label {
+	padding-top: 10px;
+	padding-left: 35px;
+}
 
 
 
