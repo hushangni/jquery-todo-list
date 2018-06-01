@@ -5,7 +5,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 body {
 	font-family: 'Open Sans', sans-serif;
 	min-height: 100vh;
-	background: #f6f7f9;
+	background: #e7e7e7;
+	/*background: url(grey-dot.png);*/
 	padding-top: 50px;
 	font-size: 1.6em;
 }
@@ -72,9 +73,10 @@ ul {
 	margin: 0;
 }
 
+/* check box li styles */
 li {
 	font-size: 0.6em;
-	padding: 15px 15px 18px;
+	padding: 15px 15px 18px 45px;
 	border: 1px solid #ababab;
 	margin: 10px 0;
 	position: relative;
@@ -135,9 +137,20 @@ li .checkmark:after {
 	transform: rotate(45deg);
 }
 
-li label {
-	padding-top: 10px;
-	padding-left: 35px;
+.head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.fa-sync {
+	color: #3844cc;
+	font-size: 1em;
+}
+
+.fa-sync:hover {
+	cursor: pointer;
+	color: #aaaadd;
 }
 
 
